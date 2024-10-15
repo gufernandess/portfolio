@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --almost-black: #0B0E17;
+    --mint: #4DF8CE;
+    --almost-yellow: #EDE6BC;
+    --hot-pink: #F83AA2;
+    --some-white: #F9F9F9;
+
+    --title-gradient: linear-gradient(90deg, #4DF8CE, #EDE6BC, #F83AA2);
+    --gradient: linear-gradient(90deg, #4DF8CE, #F83AA2);
+
+    --terminal-background: #1B192D;
+    --terminal-string: #F6C177;
+    --terminal-exit: #FF5F56;
+    --terminal_minimize: #FFBD2E;
+    --terminal_maximize: #27C93F;
+
+    --card-text: #6E6A86;
+
+    --title-font: "Press Start 2P", system-ui;
+    --terminal-font: "JetBrains Mono", monospace;
+    --subtitles-font: "Roboto", sans-serif;
+    --text-font: "Roboto Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background: transparent;
+}
+
+body {
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    background: var(--almost-black);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/background.svg'); 
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+button { cursor: pointer; }
+
+[disabled] { opacity: 0.6; cursor: not-allowed; }
+
+::-webkit-scrollbar { width: 20px; }
+  
+::-webkit-scrollbar-track { background-color: #1c1c1c; }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+  
+::-webkit-scrollbar-thumb:hover { background-color: #555; }

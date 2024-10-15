@@ -21,6 +21,10 @@ export const InitialPageTitle = styled.h1`
     opacity: 0;
     animation: ${fadeIn} 1.2s ease-out forwards, ${floating} 2.5s ease-in-out infinite; 
     animation-delay: 0.2s;
+
+    @media (max-width: 768px) { font-size: 3rem; }
+
+    @media (max-width: 480px) { font-size: 2rem; }
 `;
 
 export const InitialPageSubtitle = styled.h2`
@@ -32,6 +36,10 @@ export const InitialPageSubtitle = styled.h2`
     opacity: 0;
     animation: ${fadeIn} 1.5s ease-out forwards, ${floating} 2.5s ease-in-out infinite;
     animation-delay: 0.4s;
+
+    @media (max-width: 768px) { font-size: 1.5rem; }
+
+    @media (max-width: 480px) { font-size: 1rem; }
 `;
 
 

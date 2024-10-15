@@ -7,4 +7,11 @@ export const HeaderContainer = styled.header`
     padding: 1rem 2rem;
     width: 100%;
     height: 100px;
+    background-color: ${({ isMenuOpen }) => (isMenuOpen ? "var(--almost-black)" : "transparent")};
+
+    @media (max-width: 768px) {
+        & > :nth-child(2) {
+            display: none;
+        }
+    }
 `;

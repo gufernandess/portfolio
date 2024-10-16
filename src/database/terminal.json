@@ -1,0 +1,14 @@
+{
+
+    "strings": ["> gustavo.degree", "> gustavo.university", "> gustavo.skills", "> gustavo.workspace", "> gustavo.interests",
+    "> gustavo.languages"],
+
+    "gustavo": {
+        "degree": "Computer science",
+        "university": "Federal University of Ceara",
+        "skills": ["HTML", "CSS", "Javascript", "React", "Styled-Components", "C++", "Java", "Python", "PostgreSQL", "Git"],
+        "workspace": ["Pop!OS", "Visual Studio Code", "Vim"],
+        "interests": ["Reading", "Movies", "Gym", "Studying", "Gaming", "Travel"],
+        "languages": ["Portuguese", "English"]
+    }
+}

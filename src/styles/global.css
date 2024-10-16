@@ -16,8 +16,8 @@
     --terminal-background: #1B192D;
     --terminal-string: #F6C177;
     --terminal-exit: #FF5F56;
-    --terminal_minimize: #FFBD2E;
-    --terminal_maximize: #27C93F;
+    --terminal-minimize: #FFBD2E;
+    --terminal-maximize: #27C93F;
 
     --card-text: #6E6A86;
 
@@ -36,7 +36,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%; /* mudar para 100vh se der ruim */
     -webkit-font-smoothing: antialiased;
     background: var(--almost-black);
     position: relative;
@@ -51,7 +51,7 @@ body::before {
     bottom: 0;
     background: url('../assets/background.svg'); 
     background-size: cover;
-    opacity: 0.6;
+    opacity: 0.4;
     z-index: -1;
 }
 

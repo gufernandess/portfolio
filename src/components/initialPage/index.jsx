@@ -1,7 +1,5 @@
 import { InitialPageContainer, InitialPageSubtitle, InitialPageTitle } from "./styles";
 
-const title = "<Gustavo Fernandes/>";
-
 const InitialPage = () => {
     return (
         <InitialPageContainer>
@@ -13,7 +11,7 @@ const InitialPage = () => {
                 height: "100%",
                 width: "90%"
             }}>
-                <InitialPageTitle>{title}</InitialPageTitle>
+                <InitialPageTitle>{"<Gustavo Fernandes/>"}</InitialPageTitle>
                 <InitialPageSubtitle>Fullstack developer & computer science student</InitialPageSubtitle>
             </div>
         </InitialPageContainer>

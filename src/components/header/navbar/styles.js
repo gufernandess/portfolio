@@ -21,7 +21,7 @@ export const NavbarContainer = styled.ul`
 `;
 
 export const NavbarItem = styled.li`
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--hot-pink);
     cursor: pointer;

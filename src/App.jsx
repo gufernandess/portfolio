@@ -1,14 +1,18 @@
-import Header from './components/header'
-import InitialPage from './components/initialPage'
-import About from './components/about'
+import Header from './pages/header'
+import Main from './pages/main'
+import About from './pages/about'
+import Projects from './pages/projects'
+import Footer from './pages/footer'
 
 function App() {
 
   return (
     <>
       <Header />
-      <InitialPage />
+      <Main />
       <About />
+      <Projects />
+      <Footer />
     </>
   )
 }

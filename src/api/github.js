@@ -1,5 +1,5 @@
 async function fetchPinnedRepositories() {
-  const token = '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';
+  const token = process.env.TOKEN;
   const username = 'gufernandess';
   
   const query = `

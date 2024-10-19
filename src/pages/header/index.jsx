@@ -27,7 +27,9 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        document.body.style.overflow = menu === "true" ? 'hidden' : 'auto';
+        if(!desktop) {
+            document.body.style.overflow = menu === "true" ? 'hidden' : 'auto';
+        }
     }, [menu]);
 
     return (

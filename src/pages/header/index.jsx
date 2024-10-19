@@ -4,12 +4,13 @@ import MenuToggle from "../../components/menu/menuToggle";
 import Menu from "../../components/menu";
 import { HeaderContainer } from "./styles";
 import { Code } from "@phosphor-icons/react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useMenu } from "../../context/menuContext";
 
 const Header = () => {
+    const { menu, toggleMenu } = useMenu();
     const [desktop, setDesktop] = useState(false);
-    const [menu, setMenu] = useState("false");
 
     useEffect(() => {
         const handleResize = () => {
@@ -26,16 +27,8 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        if (menu === "true") {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        document.body.style.overflow = menu === "true" ? 'hidden' : 'auto';
     }, [menu]);
-
-    const handleMenuToggle = () => {
-        setMenu(menu === "false" ? "true" : "false");
-    };
 
     return (
         <>
@@ -55,7 +48,7 @@ const Header = () => {
                 {desktop ? (
                     <Social />
                 ) : (
-                    <MenuToggle open={menu} handle={handleMenuToggle} />
+                    <MenuToggle open={menu} handle={toggleMenu} />
                 )}
             </HeaderContainer>
             {!desktop && menu === 'true' && <Menu />}
@@ -64,4 +57,5 @@ const Header = () => {
 };
 
 export default Header;
+
 

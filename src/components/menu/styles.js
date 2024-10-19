@@ -6,7 +6,7 @@ export const MenuContainer = styled.div`
     align-items: center;
     gap: 5rem;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     background-color: var(--almost-black);
     height: calc(100vh - 100px);
     width: 100% !important;

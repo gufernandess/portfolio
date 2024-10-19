@@ -1,6 +1,9 @@
 import { NavbarContainer, NavbarItem } from "./styles";
+import { useMenu } from "../../context/menuContext";
 
 const Navbar = () => {
+    const { toggleMenu } = useMenu();
+
     const smoothScrollTo = (targetY, duration) => {
         const startY = window.scrollY;
         const distance = targetY - startY;
@@ -27,10 +30,12 @@ const Navbar = () => {
 
     const handleScrollToAbout = () => {
         smoothScrollTo(window.scrollY + 1024, 1000);
+        toggleMenu();
     };
 
     const handleScrollToProjects = () => {
         smoothScrollTo(window.scrollY + 2048, 1000);
+        toggleMenu();
     };
 
     return (
@@ -38,10 +43,10 @@ const Navbar = () => {
             <NavbarItem title='Sobre mim' onClick={handleScrollToAbout}>Sobre</NavbarItem>
             <NavbarItem title='Meus projetos' onClick={handleScrollToProjects}>Projetos</NavbarItem>
             <NavbarItem title='Meu currículo'>
-                <a href="https://drive.google.com/file/d/1FW2SjIezG1pgHWcEmsEOxY23F99TiHbO/view?usp=sharing" target="_blank" rel="noopener noreferrer" >
+                <a href="https://drive.google.com/file/d/1FW2SjIezG1pgHWcEmsEOxY23F99TiHbO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Currículo
                 </a>
-                </NavbarItem>
+            </NavbarItem>
         </NavbarContainer>
     );
 };

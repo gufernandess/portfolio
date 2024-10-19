@@ -1,5 +1,5 @@
 async function fetchPinnedRepositories() {
-  const token = import.meta.env.TOKEN;
+  const token = import.meta.env.VITE_TOKEN;
   const username = 'gufernandess';
   
   const query = `

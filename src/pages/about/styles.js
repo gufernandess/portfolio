@@ -46,6 +46,8 @@ export const AboutContent = styled.p`
   font-weight: 300;
   font-size: 1.5rem;
   width: 50%;
+  max-height: 510px;
+  overflow-y: auto;
 
   @media (max-width: 1440px) {
     font-size: 1.2rem;

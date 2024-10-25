@@ -44,7 +44,7 @@ const Terminal = () => {
                 {'> gustavo.hobbies'}
                 <br/>
                 <TerminalString>
-                    ["Leitura", "Trilhas", "Musculação", "Estudos", "Cinema", "Corrida"]
+                    ["Leitura", "Academia", "Estudos", "Cinema", "Corrida"]
                 </TerminalString>
 
                 <br/><br/>

@@ -61,3 +61,14 @@ export const AboutContent = styled.p`
     font-size: 0.8rem;
   }
 `;
+
+export const LinkStyle = styled.a`
+  color: var(--hot-pink);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--almost-yellow);
+  }
+`;

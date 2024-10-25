@@ -35,10 +35,14 @@
 }
 
 body {
-    height: 100%; /* mudar para 100vh se der ruim */
+    height: 100%;
     -webkit-font-smoothing: antialiased;
     background: var(--almost-black);
     position: relative;
+}
+
+html, body {
+    overflow-x: hidden !important;
 }
 
 a {

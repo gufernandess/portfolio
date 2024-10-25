@@ -1,4 +1,4 @@
-import { AboutContainer, AboutContent, AboutTitle, TextContainer } from "./styles";
+import { AboutContainer, AboutContent, AboutTitle, LinkStyle, TextContainer } from "./styles";
 import Terminal from "../../components/terminal";
 import { fadeInFromLeft, fadeInFromRight } from "../../animations/fade";
 import { motion } from "framer-motion";
@@ -31,9 +31,12 @@ const About = () => {
                     Em ambos os casos, tive a oportunidade de realizar grandes projetos
                     e continuar aprendendo cada vez mais.
                     <br /><br />
-                    Atualmente estou trabalhando com desenvolvimento backend com Node e MongoDB,
-                    porém estou sempre disposto a aprender qualquer coisa que envolva computação
-                    (e outras coisas também).
+                    Até agora já trabalhei como desenvolvedor backend Java na <LinkStyle href="https://gera3sistemas.com.br/" target="_blank" rel="noreferrer">
+                    Gera3 Sistemas</LinkStyle> e fui bolsista de iniciação acadêmica na célula de desenvolvimento de software
+                    do <LinkStyle href="https://inove.quixada.ufc.br/" target="_blank" rel="noreferrer">
+                    Núcleo de Inovação e Empreendedorismo</LinkStyle>. Atualmente estou estagiando
+                    como desenvolvedor backend na <LinkStyle href="https://jit.technology/" target="_blank" rel="noreferrer">
+                    JIT Technology</LinkStyle>, utilizando tecnologias como Node e MongoDB.
                 </MotionAboutContent>
 
                 <motion.div

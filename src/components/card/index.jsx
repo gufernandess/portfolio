@@ -1,40 +1,14 @@
 import { AnimationCard, CardContainer, CardDescription, CardForks, CardLanguage, CardStars, CardTitle } from "./styles";
 import { Binary, GitFork, LinkSimple, Star } from "@phosphor-icons/react";
-import { useEffect, useRef } from "react";
 
 const Card = ({ title, description, stars, forks, language, url }) => {
-    const cardRef = useRef(null);
-
-    useEffect(() => {
-        const options = {
-            root: null,
-            threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                   if (entry.target === cardRef.current) {
-                        entry.target.classList.add('slide-in-right');
-                    }
-                }
-            });
-        }, options);
-
-        if (cardRef.current) observer.observe(cardRef.current);
-
-        return () => {
-            if (cardRef.current) observer.unobserve(cardRef.current);
-        };
-    }, []);
-
     const handleCardClick = () => {
         window.open(url, "_blank", "noopener,noreferrer");
     };
 
     return (
         <AnimationCard>
-            <CardContainer ref={cardRef} onClick={handleCardClick}>
+            <CardContainer onClick={handleCardClick}>
                 <div style={{
                     display: "flex",
                     justifyContent: "start",

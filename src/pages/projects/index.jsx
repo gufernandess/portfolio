@@ -1,35 +1,15 @@
 import Card from "../../components/card";
 import { ProjectsContainer, ProjectsContent, ProjectsTitle } from "./styles";
 import fetchPinnedRepositories from "../../api/github";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { fadeInFromLeft, fadeInFromRight } from "../../animations/fade";
+import { motion } from "framer-motion";
+
+const MotionProjectsTitle = motion(ProjectsTitle);
+const MotionProjectsContent = motion(ProjectsContent);
 
 const Projects = () => {
     const [repositories, setRepositories] = useState([]);
-    
-    const titleRef = useRef(null);
-
-    useEffect(() => {
-        const options = {
-            root: null,
-            threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target === titleRef.current) {
-                        entry.target.classList.add('slide-in-left');
-                    }
-                }
-            });
-        }, options);
-
-        if (titleRef.current) observer.observe(titleRef.current);
-
-        return () => {
-            if (titleRef.current) observer.unobserve(titleRef.current);
-        };
-    }, []);
 
     useEffect(() => {
         fetchPinnedRepositories().then(data => {
@@ -47,8 +27,18 @@ const Projects = () => {
 
     return (
         <ProjectsContainer>
-            <ProjectsTitle ref={titleRef}>Projetos</ProjectsTitle>
-            <ProjectsContent>
+            <MotionProjectsTitle
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInFromLeft(0.2)}
+            >
+                Projetos
+            </MotionProjectsTitle>
+            <MotionProjectsContent
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInFromRight(0.4)}
+            >
                 {repositories.map((repo, index) => (
                     <Card
                         key={index}
@@ -60,7 +50,7 @@ const Projects = () => {
                         url={repo.url}
                     />
                 ))}
-            </ProjectsContent>
+            </MotionProjectsContent>
         </ProjectsContainer>
     );
 };

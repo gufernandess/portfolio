@@ -29,12 +29,12 @@ const Navbar = () => {
     };
 
     const handleScrollToAbout = () => {
-        smoothScrollTo(window.scrollY + 1024, 1000);
+        smoothScrollTo(window.scrollY + 900, 1000);
         toggleMenu();
     };
 
     const handleScrollToProjects = () => {
-        smoothScrollTo(window.scrollY + 2048, 1000);
+        smoothScrollTo(window.scrollY + 1900, 1000);
         toggleMenu();
     };
 

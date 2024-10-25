@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slideInLeft } from "../../animations/slide";
 
 export const AboutContainer = styled.div`
   display: flex;
@@ -18,10 +17,6 @@ export const AboutTitle = styled.h2`
   width: 90%;
   font-family: var(--subtitles-font);
   font-size: 4rem;
-
-  &.slide-in-left {
-    animation: ${slideInLeft} 1s forwards;
-  }
 
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -51,10 +46,6 @@ export const AboutContent = styled.p`
   font-weight: 300;
   font-size: 1.5rem;
   width: 50%;
-
-  &.slide-in-left {
-    animation: ${slideInLeft} 1s forwards;
-  }
 
   @media (max-width: 1440px) {
     font-size: 1.2rem;

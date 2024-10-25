@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { blink } from '../../animations/blink';
-import { slideInRight } from "../../animations/slide";
 
 export const TerminalContainer = styled.div`
   display: flex;
@@ -15,14 +14,9 @@ export const TerminalContainer = styled.div`
   height: 510px;
   width: 700px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.05);
-  }
-
-  &.slide-in-right {
-    animation: ${slideInRight} 1s forwards;
   }
 
   @media (max-width: 1440px) {width: 600px; font-size: 0.9rem;}

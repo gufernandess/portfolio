@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slideInRight } from "../../animations/slide";
 
 export const CardContainer = styled.div`
     display: flex;
@@ -14,10 +13,6 @@ export const CardContainer = styled.div`
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     height: 200px;
     width: 100%;
-
-    &.slide-in-right {
-        animation: ${slideInRight} 1s forwards;
-  }
 
     @media (max-width: 768px) {
         height: 250px;

@@ -1,67 +1,74 @@
-import { Bar, BarButton, TerminalBar, TerminalContainer, TerminalString, TerminalText } from "./styles";
+import {
+  Bar,
+  BarButton,
+  TerminalBar,
+  TerminalContainer,
+  TerminalString,
+  TerminalText,
+} from "./styles";
 
 const Terminal = () => {
-    return (
-        <TerminalContainer>
-            <Bar>
-                <BarButton color="var(--terminal-exit)"/>
-                <BarButton color="var(--terminal-minimize)"/>
-                <BarButton color="var(--terminal-maximize)"/>
-            </Bar>
-            <TerminalText>
-                {'> gustavo.degree'}
-                <br/>
-                <TerminalString>
-                    "Ciência da Computação"
-                </TerminalString>
+  return (
+    <TerminalContainer>
+      <Bar>
+        <BarButton color="var(--terminal-exit)" />
+        <BarButton color="var(--terminal-minimize)" />
+        <BarButton color="var(--terminal-maximize)" />
+      </Bar>
+      <TerminalText>
+        {"> gustavo.degree"}
+        <br />
+        <TerminalString>"Ciência da Computação"</TerminalString>
 
-                <br/><br/>
+        <br />
+        <br />
 
-                {'> gustavo.university'}
-                <br/>
-                <TerminalString>
-                    "Universidade Federal do Ceará"
-                </TerminalString>
+        {"> gustavo.university"}
+        <br />
+        <TerminalString>"Universidade Federal do Ceará (UFC)"</TerminalString>
 
-                <br/><br/>
+        <br />
+        <br />
 
-                {'> gustavo.skills'}
-                <br/>
-                <TerminalString>
-                    ["HTML", "CSS", "Javascript", "React", "Styled-Components", "C++", "Java", "Python", "PostgreSQL", "Git"]
-                </TerminalString>
+        {"> gustavo.skills"}
+        <br />
+        <TerminalString>
+          ["NodeJS", "Jest", "MongoDB", "PostgreSQL", "Docker", "Git", "Java",
+          "HTML", "CSS", "Javascript", "React", "Styled-Components",
+          "Bootstrap"]
+        </TerminalString>
 
-                <br/><br/>
+        <br />
+        <br />
 
-                {'> gustavo.workspace'}
-                <br/>
-                <TerminalString>
-                    ["Pop!OS", "Visual Studio Code", "Vim"]
-                </TerminalString>
+        {"> gustavo.workspace"}
+        <br />
+        <TerminalString>["Manjaro Linux", "Zed", "Neovim"]</TerminalString>
 
-                <br/><br/>
+        <br />
+        <br />
 
-                {'> gustavo.hobbies'}
-                <br/>
-                <TerminalString>
-                    ["Leitura", "Academia", "Estudos", "Cinema", "Corrida"]
-                </TerminalString>
+        {"> gustavo.hobbies"}
+        <br />
+        <TerminalString>
+          ["Leitura", "Academia", "Programação", "Cinema", "Escrita"]
+        </TerminalString>
 
-                <br/><br/>
+        <br />
+        <br />
 
-                {'> gustavo.languages'}
-                <br/>
-                <TerminalString>
-                ["Português", "Inglês"]
-                </TerminalString>
+        {"> gustavo.languages"}
+        <br />
+        <TerminalString>["Português (C2)", "Inglês (B2)"]</TerminalString>
 
-                <br/><br/>
+        <br />
+        <br />
 
-                {"> "}
-                <TerminalBar />
-            </TerminalText>
-        </TerminalContainer>
-    );
+        {"> "}
+        <TerminalBar />
+      </TerminalText>
+    </TerminalContainer>
+  );
 };
 
 export default Terminal;

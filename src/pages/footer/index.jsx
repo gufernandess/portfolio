@@ -1,11 +1,13 @@
 import { Copyright, FooterContainer } from "./styles";
 
 const Footer = () => {
-    return (
-        <FooterContainer>
-            <Copyright>@ Copyright 2024 by Gustavo Fernandes</Copyright>
-        </FooterContainer>
-    );
+  return (
+    <FooterContainer>
+      <Copyright>
+        &copy; Copyright {new Date().getFullYear()} by Gustavo Fernandes
+      </Copyright>
+    </FooterContainer>
+  );
 };
 
 export default Footer;

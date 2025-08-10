@@ -44,7 +44,7 @@ export const TextContainer = styled.div`
 export const AboutContent = styled.p`
   font-family: var(--text-font);
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 50%;
   max-height: 510px;
   overflow-y: auto;
@@ -55,7 +55,7 @@ export const AboutContent = styled.p`
   }
 
   @media (max-width: 768px) {
-  font-size: 1rem;
+    font-size: 1rem;
     width: 100%;
   }
 

@@ -15,6 +15,7 @@ export const AboutTitle = styled.h2`
   justify-content: start;
   align-items: start;
   width: 90%;
+  color: var(--almost-yellow) !important;
   font-family: var(--subtitles-font);
   font-size: 4rem;
 
@@ -22,7 +23,7 @@ export const AboutTitle = styled.h2`
     font-size: 3rem;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 480px) {
     font-size: 2rem;
   }
 `;

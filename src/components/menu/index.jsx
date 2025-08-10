@@ -1,14 +1,14 @@
 import { MenuContainer } from "./styles";
 import Navbar from "../navbar";
-import Social from "../social";
+import LanguageSwitcher from "../languageSwitcher";
 
 const Menu = () => {
-    return (
-        <MenuContainer>
-            <Navbar />
-            <Social />
-        </MenuContainer>
-    );
+  return (
+    <MenuContainer>
+      <Navbar />
+      <LanguageSwitcher />
+    </MenuContainer>
+  );
 };
 
 export default Menu;

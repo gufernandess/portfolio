@@ -1,8 +1,10 @@
 import { NavbarContainer, NavbarItem } from "./styles";
 import { useMenu } from "../../context/menuContext";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { toggleMenu } = useMenu();
+  const { t } = useTranslation();
 
   const smoothScrollTo = (targetY, duration) => {
     const startY = window.scrollY;
@@ -13,14 +15,11 @@ const Navbar = () => {
       if (!startTime) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
-
       window.scrollTo(0, startY + distance * easeInOutQuad(progress));
-
       if (timeElapsed < duration) {
         requestAnimationFrame(animation);
       }
     };
-
     requestAnimationFrame(animation);
   };
 
@@ -38,22 +37,33 @@ const Navbar = () => {
     toggleMenu();
   };
 
+  const handleScrollToContacts = () => {
+    const targetY = document.documentElement.scrollHeight;
+    smoothScrollTo(targetY, 1000);
+    toggleMenu();
+  };
+
   return (
     <NavbarContainer>
-      <NavbarItem title="Sobre mim" onClick={handleScrollToAbout}>
-        Sobre
+      <NavbarItem title={t("header.menu.about")} onClick={handleScrollToAbout}>
+        {t("header.menu.about")}
       </NavbarItem>
-      <NavbarItem title="Meus projetos" onClick={handleScrollToProjects}>
-        Projetos
+      <NavbarItem
+        title={t("header.menu.projects")}
+        onClick={handleScrollToProjects}
+      >
+        {t("header.menu.projects")}
       </NavbarItem>
-      <NavbarItem title="Meu currículo">
-        <a
-          href={import.meta.env.VITE_RESUME_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Currículo
-        </a>
+
+      {/* <NavbarItem title={t("menu_career")}>
+         {t("menu_career")}
+      </NavbarItem> */}
+
+      <NavbarItem
+        title={t("header.menu.contacts")}
+        onClick={handleScrollToContacts}
+      >
+        {t("header.menu.contacts")}
       </NavbarItem>
     </NavbarContainer>
   );

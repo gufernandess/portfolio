@@ -8,11 +8,16 @@ import {
 import Terminal from "../../components/terminal";
 import { fadeInFromLeft, fadeInFromRight } from "../../animations/fade";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import React from "react";
 
 const MotionAboutTitle = motion(AboutTitle);
 const MotionAboutContent = motion(AboutContent);
 
 const About = () => {
+  const { t } = useTranslation();
+  const aboutContent = t("about", { returnObjects: true });
+
   return (
     <AboutContainer>
       <MotionAboutTitle
@@ -20,7 +25,7 @@ const About = () => {
         whileInView="visible"
         variants={fadeInFromLeft(0.2)}
       >
-        Sobre mim
+        {aboutContent.title}
       </MotionAboutTitle>
 
       <TextContainer>
@@ -29,25 +34,22 @@ const About = () => {
           whileInView="visible"
           variants={fadeInFromLeft(0.4)}
         >
-          Olá! Meu nome é Gustavo Fernandes, sou um estudante de ciência da
-          computação e engenheiro de software que pretende, recursivamente,
-          aprender e evoluir cada vez mais.
-          <br />
-          <br />
-          Apesar das minhas principais experiências consistirem em
-          desenvolvimento web de maneira geral, como um bom generalista eu nunca
-          largo mão de aprender sobre qualquer coisa. Seja passando por
-          conceitos como aprendizado de máquina ou programação funcional ou
-          participando de hackathons e competições de programação competitiva,
-          estudar sobre essa área sempre me cativa.
-          <br />
-          <br />
-          <LinkStyle>
-            Desta forma, meu objetivo aqui é unir a ciência e a arte de
-            programar para desenvolver soluções em forma de software e assim
-            agregar valor a vida das pessoas. Além de obviamente me divertir no
-            processo.
-          </LinkStyle>
+          {aboutContent.paragraphs.map((paragraph, index) => {
+            const isLastParagraph =
+              index === aboutContent.paragraphs.length - 1;
+
+            if (isLastParagraph) {
+              return <LinkStyle key={index}>{paragraph}</LinkStyle>;
+            }
+
+            return (
+              <React.Fragment key={index}>
+                {paragraph}
+                <br />
+                <br />
+              </React.Fragment>
+            );
+          })}
         </MotionAboutContent>
 
         <motion.div

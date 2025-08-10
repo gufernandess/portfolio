@@ -1,7 +1,7 @@
 async function fetchPinnedRepositories() {
   const token = import.meta.env.VITE_TOKEN;
-  const username = 'gufernandess';
-  
+  const username = import.meta.env.VITE_GITHUB_USERNAME;
+
   const query = `
   {
     user(login: "${username}") {
@@ -24,35 +24,34 @@ async function fetchPinnedRepositories() {
   }`;
 
   try {
-      const response = await fetch('https://api.github.com/graphql', {
-          method: 'POST',
-          headers: {
-              'Authorization': `Bearer ${token}`,
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ query })
-      });
+    const response = await fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    });
 
-      if (!response.ok) {
-          throw new Error(`Erro: ${response.status}`);
-      }
+    if (!response.ok) {
+      throw new Error(`Erro: ${response.status}`);
+    }
 
-      const data = await response.json();
+    const data = await response.json();
 
-      const pinnedRepos = data.data.user.pinnedItems.nodes.map(repo => ({
-          name: repo.name,
-          description: repo.description,
-          stars: repo.stargazerCount,
-          forks: repo.forkCount,
-          language: repo.primaryLanguage ? repo.primaryLanguage.name : null,
-          url: repo.url,
-          homepage: repo.homepageUrl ? repo.homepageUrl : null
-      }));
+    const pinnedRepos = data.data.user.pinnedItems.nodes.map((repo) => ({
+      name: repo.name,
+      description: repo.description,
+      stars: repo.stargazerCount,
+      forks: repo.forkCount,
+      language: repo.primaryLanguage ? repo.primaryLanguage.name : null,
+      url: repo.url,
+      homepage: repo.homepageUrl ? repo.homepageUrl : null,
+    }));
 
-      return pinnedRepos;
-
+    return pinnedRepos;
   } catch (error) {
-      return { error: error.message };
+    return { error: error.message };
   }
 }
 

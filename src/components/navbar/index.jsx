@@ -55,8 +55,11 @@ const Navbar = () => {
         {t("header.menu.projects")}
       </NavbarItem>
 
-      {/* <NavbarItem title={t("menu_career")}>
-         {t("menu_career")}
+      {/* <NavbarItem
+        title={t("header.menu.career")}
+        onClick={handleScrollToProjects}
+      >
+        {t("header.menu.career")}
       </NavbarItem> */}
 
       <NavbarItem

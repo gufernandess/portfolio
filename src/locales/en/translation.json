@@ -8,12 +8,12 @@
     }
   },
   "hero": {
-    "subtitle": "Fullstack Developer & Computer Science Student"
+    "subtitle": "Fullstack Developer & Computer Scientist"
   },
   "about": {
     "title": "About me",
     "paragraphs": [
-      "Hello! My name is Gustavo Fernandes, I am a computer science student and software engineer who recursively aims to learn and continuously evolve.",
+      "Hello! My name is Gustavo Fernandes, I am a computer scientist and software engineer who recursively aims to learn and continuously evolve.",
       "Although my main experience is in web development, as a good generalist, I'm always eager to learn new things. Whether it's diving into concepts like machine learning and functional programming, or participating in hackathons and competitive programming competitions, studying this field always captivates me.",
       "Therefore, my goal is to combine the science and art of programming to develop software solutions that add value to people's lives. And, of course, have fun in the process."
     ]
@@ -21,9 +21,9 @@
   "details": {
     "terminal": {
       "degree": "Computer Science",
-      "university": "Federal University of Ceará (UFC)",
-      "hobbies": ["Reading", "Gym", "Coding", "Movies", "Writing"],
-      "languages": ["Portuguese (C2)", "English (B2)"]
+      "university": "Federal University of Ceará",
+      "hobbies": ["Reading", "Gym", "Running", "Coding"],
+      "languages": ["Portuguese", "English"]
     }
   },
   "projects": {

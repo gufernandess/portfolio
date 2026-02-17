@@ -23,26 +23,26 @@ const Terminal = () => {
       <TerminalText>
         {"> gustavo.degree"}
         <br />
-        <TerminalString>"{terminalContent.degree}"</TerminalString>
+        <TerminalString>&quot;{terminalContent.degree}&quot;</TerminalString>
         <br />
         <br />
         {"> gustavo.university"}
         <br />
-        <TerminalString>"{terminalContent.university}"</TerminalString>
+        <TerminalString>
+          &quot;{terminalContent.university}&quot;
+        </TerminalString>
         <br />
         <br />
         {"> gustavo.skills"}
         <br />
         <TerminalString>
-          ["NodeJS", "Jest", "MongoDB", "PostgreSQL", "Docker", "Git", "Java",
-          "HTML", "CSS", "Javascript", "React", "Styled-Components",
-          "Bootstrap"]
+          {`["NodeJS", "Jest", "MongoDB", "PostgreSQL", "Docker", "Git", "Java", "C++", "Python", "Typescript", "ReactJS", "Styled-Components"]`}
         </TerminalString>
         <br />
         <br />
         {"> gustavo.workspace"}
         <br />
-        <TerminalString>["Manjaro Linux", "Zed", "Neovim"]</TerminalString>
+        <TerminalString>{`["Manjaro Linux", "Visual Studio Code", "Neovim"]`}</TerminalString>
         <br />
         <br />
         {"> gustavo.hobbies"}

@@ -8,12 +8,12 @@
     }
   },
   "hero": {
-    "subtitle": "Desenvolvedor Fullstack & Estudante de Ciência da Computação"
+    "subtitle": "Desenvolvedor Fullstack & Cientista da Computação"
   },
   "about": {
     "title": "Sobre mim",
     "paragraphs": [
-      "Olá! Meu nome é Gustavo Fernandes, sou um estudante de ciência da computação e engenheiro de software que pretende, recursivamente, aprender e evoluir cada vez mais.",
+      "Olá! Meu nome é Gustavo Fernandes, sou um cientista da computação e engenheiro de software que pretende, recursivamente, aprender e evoluir cada vez mais.",
       "Apesar das minhas principais experiências consistirem em desenvolvimento web de maneira geral, como um bom generalista eu nunca largo mão de aprender sobre qualquer coisa. Seja passando por conceitos como aprendizado de máquina ou programação funcional ou participando de hackathons e competições de programação competitiva, estudar sobre essa área sempre me cativa.",
       "Desta forma, meu objetivo aqui é unir a ciência e a arte de programar para desenvolver soluções em forma de software e assim agregar valor a vida das pessoas. Além de obviamente me divertir no processo."
     ]
@@ -21,9 +21,9 @@
   "details": {
     "terminal": {
       "degree": "Ciência da Computação",
-      "university": "Universidade Federal do Ceará (UFC)",
-      "hobbies": ["Leitura", "Academia", "Programação", "Cinema", "Escrita"],
-      "languages": ["Português (C2)", "Inglês (B2)"]
+      "university": "Universidade Federal do Ceará",
+      "hobbies": ["Leitura", "Academia", "Corrida", "Programação"],
+      "languages": ["Português", "Inglês"]
     }
   },
   "projects": {

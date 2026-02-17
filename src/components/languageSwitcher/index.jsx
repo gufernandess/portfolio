@@ -15,7 +15,7 @@ const LanguageSwitcher = () => {
     <SwitcherContainer>
       <SwitchWrapper onClick={handleToggle}>
         <SwitchButton active={isToggled}>
-          {isToggled ? "EN" : "PT"}
+          {isToggled ? "En" : "Pt"}
         </SwitchButton>
       </SwitchWrapper>
     </SwitcherContainer>

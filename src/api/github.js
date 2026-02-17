@@ -10,6 +10,7 @@ async function fetchPinnedRepositories() {
           ... on Repository {
             name
             description
+            openGraphImageUrl
             stargazerCount
             forkCount
             primaryLanguage {
@@ -42,6 +43,7 @@ async function fetchPinnedRepositories() {
     const pinnedRepos = data.data.user.pinnedItems.nodes.map((repo) => ({
       name: repo.name,
       description: repo.description,
+      image: repo.openGraphImageUrl || null,
       stars: repo.stargazerCount,
       forks: repo.forkCount,
       language: repo.primaryLanguage ? repo.primaryLanguage.name : null,

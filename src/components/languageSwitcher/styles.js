@@ -34,7 +34,13 @@ export const SwitchButton = styled.div`
   font-weight: bold;
   font-size: 14px;
 
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.2s ease;
+
+  &:hover {
+    background: var(--almost-yellow);
+  }
 
   ${({ active }) =>
     active &&

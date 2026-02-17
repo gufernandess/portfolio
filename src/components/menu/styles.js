@@ -8,7 +8,13 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   position: fixed;
   background-color: var(--almost-black);
-  height: calc(100vh - 100px);
+  top: 70px;
+  height: calc(100vh - 70px);
   width: 100% !important;
-  z-index: 100;
+  z-index: 1500;
+
+  @media (min-width: 769px) {
+    top: 100px;
+    height: calc(100vh - 100px);
+  }
 `;

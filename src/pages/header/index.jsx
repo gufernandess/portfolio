@@ -11,6 +11,7 @@ import { useMenu } from "../../context/menuContext";
 const Header = () => {
   const { menu, toggleMenu } = useMenu();
   const [desktop, setDesktop] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,6 +28,17 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     if (!desktop) {
       document.body.style.overflow = menu === "true" ? "hidden" : "auto";
     }
@@ -34,7 +46,7 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer menu={menu}>
+      <HeaderContainer menu={menu} isScrolled={isScrolled}>
         <Link to="/">
           <Code
             size={64}

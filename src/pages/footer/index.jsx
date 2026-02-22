@@ -3,7 +3,7 @@ import Social from "../../components/social";
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="contacts">
       <Social />
       <Copyright>
         &copy; Copyright {new Date().getFullYear()} by Gustavo Fernandes

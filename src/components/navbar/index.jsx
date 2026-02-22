@@ -28,18 +28,28 @@ const Navbar = () => {
   };
 
   const handleScrollToAbout = () => {
-    smoothScrollTo(window.scrollY + 900, 1000);
-    toggleMenu();
+    scrollToId("about");
   };
 
   const handleScrollToProjects = () => {
-    smoothScrollTo(window.scrollY + 1900, 1000);
-    toggleMenu();
+    scrollToId("projects");
   };
 
   const handleScrollToContacts = () => {
-    const targetY = document.documentElement.scrollHeight;
-    smoothScrollTo(targetY, 1000);
+    scrollToId("contacts");
+  };
+
+  const scrollToId = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // fallback to previous hardcoded offsets if element not found
+      if (id === "about") smoothScrollTo(window.scrollY + 900, 1000);
+      else if (id === "projects") smoothScrollTo(window.scrollY + 1900, 1000);
+      else if (id === "contacts")
+        smoothScrollTo(document.documentElement.scrollHeight, 1000);
+    }
     toggleMenu();
   };
 

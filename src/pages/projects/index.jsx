@@ -64,7 +64,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
       <MotionProjectsTitle
         initial="hidden"
         whileInView="visible"

@@ -5,7 +5,7 @@ const Main = () => {
   const { t } = useTranslation();
 
   return (
-    <MainContainer>
+    <MainContainer id="home">
       <div
         style={{
           display: "flex",

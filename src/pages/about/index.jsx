@@ -19,7 +19,7 @@ const About = () => {
   const aboutContent = t("about", { returnObjects: true });
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <MotionAboutTitle
         initial="hidden"
         whileInView="visible"

@@ -25,31 +25,31 @@
         "title": "Desenvolvedor Fullstack",
         "subtitle": "NextPage — jan de 2026 - presente",
         "text": "Remoto · NextPage · React.js · TypeScript · Astro · Strapi",
-        "detail": "Atuação fullstack em produto: frontend React+TS, integração com Strapi e builds com Astro. Trabalho remoto desde jan/2026."
+        "detail": "Desenvolvimento fullstack: features em React+TS, integrações com Strapi, otimização de builds com Astro, code reviews e testes em CI."
       },
       {
         "title": "Desenvolvedor Júnior",
         "subtitle": "JIT Technology — out 2024 - nov 2025",
         "text": "Remoto · CRM · Módulo financeiro · Automação",
-        "detail": "Ponto focal técnico no CRM: arquitetura e deploy; desenvolvimento do módulo financeiro (PIX/Boleto) e integração cambial; background jobs para mensageria; cultura de testes (Jest) e análise estática (SonarQube)."
+        "detail": "Ponto técnico do CRM: arquitetura e deploy; módulo financeiro (PIX/Boleto) com integração cambial; background jobs para mensageria (~10k envios/mês); Jest e SonarQube; redução de ~90% no tempo de conciliação."
       },
       {
         "title": "Desenvolvedor Frontend",
         "subtitle": "Shotokawa Comics — jun 2023 - dez 2023",
         "text": "Freelance · SPA React · UX para leitor de quadrinhos",
-        "detail": "Desenvolvimento do client-side de plataforma de streaming de quadrinhos: SPA em React, interfaces responsivas e leitor otimizado para web."
+        "detail": "Construí o client-side da SPA em React: leitor otimizado, carregamento progressivo de imagens e melhorias de performance; trabalho direto com o cliente."
       },
       {
         "title": "Desenvolvedor Frontend (Aprendiz)",
         "subtitle": "INOVE - UFC Quixadá — abr 2022 - abr 2023",
         "text": "Presencial · Componentização · Boas práticas",
-        "detail": "Atuação em célula de desenvolvimento: componentização, organização de código e vivência no ciclo de vida de software."
+        "detail": "Atuação em célula de desenvolvimento: componentização, padrões e entrega de features em ambiente colaborativo; documentação e práticas ágeis."
       },
       {
         "title": "Estagiário de Engenharia de Software",
         "subtitle": "Gera Sistemas — jan 2021 - ago 2021",
         "text": "Remoto · Backend Java · Automação",
-        "detail": "Desenvolvimento de APIs REST, automação com Selenium e integração para BI."
+        "detail": "Desenvolvimento de APIs REST em Java; automação de coleta com Selenium; integração de métricas e dashboards para BI."
       }
     ]
   },

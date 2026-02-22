@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const pulse = keyframes`
+  0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50% { transform: translate(-50%, -50%) scale(1.14); box-shadow: 0 0 12px var(--hot-pink); }
+  100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+`;
 
 export const CareerContainer = styled.div`
   display: flex;
@@ -95,10 +101,17 @@ export const TimelineDot = styled.div`
   display: block;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  animation: ${pulse} 1.6s ease-in-out infinite;
+  will-change: transform;
+  cursor: pointer;
   z-index: 3;
   margin: 0;
   box-shadow: none;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 export const DotWrapper = styled.div`
@@ -112,6 +125,11 @@ export const DotWrapper = styled.div`
     opacity: 1;
     transform: translateX(-50%) translateY(0);
     pointer-events: auto;
+  }
+  &:hover > .dot {
+    animation-play-state: paused;
+    transform: translate(-50%, -50%) scale(1.22);
+    box-shadow: 0 0 18px var(--hot-pink);
   }
 `;
 
@@ -150,22 +168,22 @@ export const Tooltip = styled.div`
 export const ItemTitle = styled.h3`
   color: var(--hot-pink);
   font-family: var(--subtitles-font);
-  font-size: 1.1rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
 `;
 
 export const ItemSubtitle = styled.h4`
   color: var(--almost-yellow);
   font-family: var(--text-font);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 300;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 `;
 
 export const ItemText = styled.p`
   color: var(--card-text);
   font-family: var(--text-font);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 300;
 `;
 

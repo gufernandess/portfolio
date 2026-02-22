@@ -25,31 +25,31 @@
         "title": "Fullstack Developer",
         "subtitle": "NextPage — Jan 2026 - present",
         "text": "Remote · NextPage · React.js · TypeScript · Astro · Strapi",
-        "detail": "Fullstack work on product: React+TS frontend, Strapi integrations and Astro builds. Remote since Jan/2026."
+        "detail": "Fullstack development: React+TS features, Strapi integrations, Astro build optimizations, code reviews and CI tests."
       },
       {
         "title": "Junior Software Engineer",
         "subtitle": "JIT Technology — Oct 2024 - Nov 2025",
         "text": "Remote · CRM · Financial module · Automation",
-        "detail": "Technical focal point for CRM: architecture and deploy; built financial module (PIX/Boleto) with currency API; background jobs for messaging; introduced Jest tests and SonarQube."
+        "detail": "CRM technical lead: architecture & deploy; financial module (PIX/Boleto) with currency API; background jobs for messaging (~10k sends/mo); introduced Jest and SonarQube; ~90% faster reconciliation."
       },
       {
         "title": "Frontend Developer",
         "subtitle": "Shotokawa Comics — Jun 2023 - Dec 2023",
         "text": "Freelance · SPA React · Optimized reader UX",
-        "detail": "Built the client-side of a comics streaming SPA with React and styled-components; implemented optimized reader and responsive UI."
+        "detail": "Built the React SPA client: optimized reader with progressive image loading and performance improvements; direct client collaboration."
       },
       {
         "title": "Frontend Developer (Apprentice)",
         "subtitle": "INOVE - UFC Quixadá — Apr 2022 - Apr 2023",
         "text": "On-site · Componentization · Best practices",
-        "detail": "Worked in a development cell: componentization, code organization and hands-on SDLC experience."
+        "detail": "Worked in a development cell: componentization, coding standards and feature delivery in an agile environment; documentation."
       },
       {
         "title": "Software Engineer Intern",
         "subtitle": "Gera Systems — Jan 2021 - Aug 2021",
         "text": "Remote · Java backend · Automation",
-        "detail": "Developed REST APIs, automated data collection with Selenium, and integrated BI metrics."
+        "detail": "Developed Java REST APIs; automated data collection with Selenium; integrated metrics and dashboards for BI."
       }
     ]
   },

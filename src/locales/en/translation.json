@@ -22,34 +22,34 @@
     "title": "Career",
     "items": [
       {
-        "title": "Web Development Intern",
-        "subtitle": "Alpha Company — 2017",
-        "text": "Worked on front-end tasks and API integrations.",
-        "detail": "Worked closely with designers to implement responsive UI, improved API integration reliability, and wrote unit tests for key components. Learned best practices for collaborative development."
+        "title": "Fullstack Developer",
+        "subtitle": "NextPage — Jan 2026 - present",
+        "text": "Remote · NextPage · React.js · TypeScript · Astro · Strapi",
+        "detail": "Fullstack work on product: React+TS frontend, Strapi integrations and Astro builds. Remote since Jan/2026."
       },
       {
-        "title": "Junior Developer",
-        "subtitle": "Beta Company — 2018-2019",
-        "text": "Contributed to fullstack development and service maintenance.",
-        "detail": "Built features across front-end and back-end, participated in code reviews, and helped reduce average response times through performance tuning and database indexing." 
+        "title": "Junior Software Engineer",
+        "subtitle": "JIT Technology — Oct 2024 - Nov 2025",
+        "text": "Remote · CRM · Financial module · Automation",
+        "detail": "Technical focal point for CRM: architecture and deploy; built financial module (PIX/Boleto) with currency API; background jobs for messaging; introduced Jest tests and SonarQube."
       },
       {
-        "title": "Mid-level Developer",
-        "subtitle": "Gamma Company — 2020-2022",
-        "text": "Technical leadership on key features and performance improvements.",
-        "detail": "Led a small team to deliver high-impact features, introduced CI/CD pipelines, and implemented monitoring which increased system uptime and reduced incident resolution time." 
+        "title": "Frontend Developer",
+        "subtitle": "Shotokawa Comics — Jun 2023 - Dec 2023",
+        "text": "Freelance · SPA React · Optimized reader UX",
+        "detail": "Built the client-side of a comics streaming SPA with React and styled-components; implemented optimized reader and responsive UI."
       },
       {
-        "title": "Software Engineer",
-        "subtitle": "Freelance / Personal Projects — 2023",
-        "text": "Building personal projects, open-source work and consulting.",
-        "detail": "Designed and delivered multiple personal projects, contributed to open-source libraries, and consulted for small teams on architecture and best practices." 
+        "title": "Frontend Developer (Apprentice)",
+        "subtitle": "INOVE - UFC Quixadá — Apr 2022 - Apr 2023",
+        "text": "On-site · Componentization · Best practices",
+        "detail": "Worked in a development cell: componentization, code organization and hands-on SDLC experience."
       },
       {
-        "title": "Senior Software Engineer",
-        "subtitle": "Delta Company — 2024-present",
-        "text": "Working on architecture, technical leadership and product evolution.",
-        "detail": "Driving architectural decisions, mentoring engineers, and working closely with product to align technical roadmaps with business goals. Focused on scalability and developer experience." 
+        "title": "Software Engineer Intern",
+        "subtitle": "Gera Systems — Jan 2021 - Aug 2021",
+        "text": "Remote · Java backend · Automation",
+        "detail": "Developed REST APIs, automated data collection with Selenium, and integrated BI metrics."
       }
     ]
   },

@@ -84,8 +84,6 @@ export const TimelineItem = styled.div`
   }
 `;
 
- 
-
 /* Hover wrapper removed — reverting to original timeline structure */
 
 export const TimelineDot = styled.div`
@@ -112,7 +110,7 @@ export const DotWrapper = styled.div`
 
   &:hover > .tooltip {
     opacity: 1;
-    transform: translate(-50%, ${(props) => (props.position === "top" ? "-120%" : "40%")});
+    transform: translateX(-50%) translateY(0);
     pointer-events: auto;
   }
 `;
@@ -120,16 +118,22 @@ export const DotWrapper = styled.div`
 export const Tooltip = styled.div`
   position: absolute;
   left: 50%;
-  transform: translate(-50%, ${(props) => (props.position === "top" ? "-140%" : "120%")});
+  transform: translateX(-50%)
+    translateY(${(props) => (props.position === "top" ? "10px" : "-10px")});
+  top: ${(props) => (props.position === "top" ? "calc(50% + 22px)" : "auto")};
+  bottom: ${(props) =>
+    props.position === "top" ? "auto" : "calc(50% + 22px)"};
   background: var(--terminal-background);
   color: var(--some-white);
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  width: 260px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 400px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
   z-index: 4;
 
   @media (max-width: 768px) {
@@ -146,22 +150,22 @@ export const Tooltip = styled.div`
 export const ItemTitle = styled.h3`
   color: var(--hot-pink);
   font-family: var(--subtitles-font);
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
 `;
 
 export const ItemSubtitle = styled.h4`
   color: var(--almost-yellow);
   font-family: var(--text-font);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 300;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 `;
 
 export const ItemText = styled.p`
   color: var(--card-text);
   font-family: var(--text-font);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 300;
 `;
 

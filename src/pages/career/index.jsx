@@ -18,7 +18,6 @@ import { DotWrapper, Tooltip } from "./styles";
 const MotionCareerTitle = motion(CareerTitle);
 const MotionTimeline = motion(Timeline);
 
-// highlights keywords in tooltip text by wrapping matches with a pink span
 const KEYWORDS = [
   "React.js",
   "React",

@@ -108,8 +108,6 @@ export const TimelineItem = styled.div`
   }
 `;
 
-/* Hover wrapper removed — reverting to original timeline structure */
-
 export const TimelineDot = styled.div`
   width: 26px;
   height: 26px;

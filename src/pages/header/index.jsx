@@ -49,7 +49,7 @@ const Header = () => {
       <HeaderContainer menu={menu} isScrolled={isScrolled}>
         <Link to="/">
           <Code
-            size={64}
+            size={52}
             weight="bold"
             style={{
               background: "transparent",

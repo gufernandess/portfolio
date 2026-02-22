@@ -11,9 +11,15 @@ export const CareerContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: white;
+  padding: 4rem 0;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 3rem 0;
+  }
 `;
 
 export const CareerTitle = styled.h2`
@@ -50,19 +56,20 @@ export const Timeline = styled.div`
     z-index: 1;
   }
 
-  /* place dots and tooltips at fixed percentages across the timeline */
-  /* dots/tooltips are positioned relative to each TimelineItem (centered in item) */
-
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    align-items: flex-start;
 
     &::before {
-      left: 20px;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 6px;
+      left: 18px;
+      right: auto;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      height: auto;
+      transform: none;
     }
   }
 `;
@@ -83,10 +90,21 @@ export const TimelineItem = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    gap: 1rem;
-    min-height: 200px;
+    min-height: auto;
+    padding-left: 50px;
+    position: relative;
+
+    &[data-position="left"] {
+      padding-left: 50px;
+      padding-right: 0;
+    }
+
+    &[data-position="right"] {
+      padding-left: 50px;
+      padding-right: 0;
+    }
   }
 `;
 
@@ -101,6 +119,7 @@ export const TimelineDot = styled.div`
   display: block;
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(1);
   animation: ${pulse} 1.6s ease-in-out infinite;
   will-change: transform;
@@ -108,6 +127,12 @@ export const TimelineDot = styled.div`
   z-index: 3;
   margin: 0;
   box-shadow: none;
+
+  @media (max-width: 768px) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
@@ -130,6 +155,19 @@ export const DotWrapper = styled.div`
     animation-play-state: paused;
     transform: translate(-50%, -50%) scale(1.22);
     box-shadow: 0 0 18px var(--hot-pink);
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    transform: none;
+
+    &:hover > .dot {
+      transform: translate(-50%, -50%) scale(1.22);
+    }
   }
 `;
 
@@ -155,13 +193,7 @@ export const Tooltip = styled.div`
   z-index: 4;
 
   @media (max-width: 768px) {
-    position: relative;
-    left: 0;
-    transform: none;
-    width: 100%;
-    opacity: 1;
-    pointer-events: auto;
-    margin-top: 0.6rem;
+    display: none;
   }
 `;
 
@@ -187,6 +219,19 @@ export const ItemText = styled.p`
   font-weight: 300;
 `;
 
+export const MobileDetail = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: var(--terminal-background);
+    border-radius: 6px;
+    border-left: 3px solid var(--hot-pink);
+  }
+`;
+
 export const TimelineContent = styled.div`
   font-family: var(--text-font);
   text-align: center;
@@ -195,8 +240,9 @@ export const TimelineContent = styled.div`
   margin-top: ${(props) => (props.position === "bottom" ? "13rem" : "0")};
 
   @media (max-width: 768px) {
-    margin-top: 0;
-    margin-bottom: 2.4rem;
+    margin: 0;
     text-align: left;
+    width: 100%;
+    padding-bottom: 1rem;
   }
 `;

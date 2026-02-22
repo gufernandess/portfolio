@@ -8,6 +8,7 @@ import {
   ItemTitle,
   ItemSubtitle,
   ItemText,
+  MobileDetail,
 } from "./styles";
 import { motion } from "framer-motion";
 import { fadeInFromLeft } from "../../animations/fade";
@@ -85,10 +86,22 @@ const Career = () => {
           .slice()
           .reverse()
           .map((item, idx) => {
-            const pos = idx % 2 === 0 ? "top" : "bottom"; // idx 0 -> ponto 1 (ímpar) acima
+            const pos = idx % 2 === 0 ? "top" : "bottom";
+            const mobilePos = idx % 2 === 0 ? "left" : "right";
 
             return (
-              <TimelineItem key={idx}>
+              <TimelineItem key={idx} data-position={mobilePos}>
+                <DotWrapper position={pos}>
+                  <TimelineDot className="dot" />
+                  <Tooltip className="tooltip" position={pos}>
+                    <ItemText
+                      style={{ color: "var(--some-white)", marginTop: 0 }}
+                    >
+                      {highlightText(item.detail || item.text)}
+                    </ItemText>
+                  </Tooltip>
+                </DotWrapper>
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -101,45 +114,18 @@ const Career = () => {
                     width: "100%",
                   }}
                 >
-                  {pos === "top" ? (
-                    <>
-                      <TimelineContent position={pos}>
-                        <ItemTitle>{item.title}</ItemTitle>
-                        <ItemSubtitle>{item.subtitle}</ItemSubtitle>
-                        <ItemText>{item.text}</ItemText>
-                      </TimelineContent>
-
-                      <DotWrapper position={pos}>
-                        <TimelineDot className="dot" />
-                        <Tooltip className="tooltip" position={pos}>
-                          <ItemText
-                            style={{ color: "var(--some-white)", marginTop: 0 }}
-                          >
-                            {highlightText(item.detail || item.text)}
-                          </ItemText>
-                        </Tooltip>
-                      </DotWrapper>
-                    </>
-                  ) : (
-                    <>
-                      <DotWrapper position={pos}>
-                        <TimelineDot className="dot" />
-                        <Tooltip className="tooltip" position={pos}>
-                          <ItemText
-                            style={{ color: "var(--some-white)", marginTop: 0 }}
-                          >
-                            {highlightText(item.detail || item.text)}
-                          </ItemText>
-                        </Tooltip>
-                      </DotWrapper>
-
-                      <TimelineContent position={pos}>
-                        <ItemTitle>{item.title}</ItemTitle>
-                        <ItemSubtitle>{item.subtitle}</ItemSubtitle>
-                        <ItemText>{item.text}</ItemText>
-                      </TimelineContent>
-                    </>
-                  )}
+                  <TimelineContent position={pos}>
+                    <ItemTitle>{item.title}</ItemTitle>
+                    <ItemSubtitle>{item.subtitle}</ItemSubtitle>
+                    <ItemText>{item.text}</ItemText>
+                    <MobileDetail>
+                      <ItemText
+                        style={{ color: "var(--some-white)", marginTop: 0 }}
+                      >
+                        {highlightText(item.detail || item.text)}
+                      </ItemText>
+                    </MobileDetail>
+                  </TimelineContent>
                 </motion.div>
               </TimelineItem>
             );

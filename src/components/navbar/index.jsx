@@ -31,6 +31,10 @@ const Navbar = () => {
     scrollToId("about");
   };
 
+  const handleScrollToCareer = () => {
+    scrollToId("career");
+  };
+
   const handleScrollToProjects = () => {
     scrollToId("projects");
   };
@@ -46,6 +50,7 @@ const Navbar = () => {
     } else {
       // fallback to previous hardcoded offsets if element not found
       if (id === "about") smoothScrollTo(window.scrollY + 900, 1000);
+      else if (id === "career") smoothScrollTo(window.scrollY + 1400, 1000);
       else if (id === "projects") smoothScrollTo(window.scrollY + 1900, 1000);
       else if (id === "contacts")
         smoothScrollTo(document.documentElement.scrollHeight, 1000);
@@ -58,19 +63,20 @@ const Navbar = () => {
       <NavbarItem title={t("header.menu.about")} onClick={handleScrollToAbout}>
         {t("header.menu.about")}
       </NavbarItem>
+
+      <NavbarItem
+        title={t("header.menu.career")}
+        onClick={handleScrollToCareer}
+      >
+        {t("header.menu.career")}
+      </NavbarItem>
+
       <NavbarItem
         title={t("header.menu.projects")}
         onClick={handleScrollToProjects}
       >
         {t("header.menu.projects")}
       </NavbarItem>
-
-      {/* <NavbarItem
-        title={t("header.menu.career")}
-        onClick={handleScrollToProjects}
-      >
-        {t("header.menu.career")}
-      </NavbarItem> */}
 
       <NavbarItem
         title={t("header.menu.contacts")}

@@ -42,7 +42,7 @@ const Header = () => {
     if (!desktop) {
       document.body.style.overflow = menu === "true" ? "hidden" : "auto";
     }
-  }, [menu]);
+  }, [desktop, menu]);
 
   return (
     <>

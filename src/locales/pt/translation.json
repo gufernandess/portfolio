@@ -18,6 +18,41 @@
       "Desta forma, meu objetivo aqui é unir a ciência e a arte de programar para desenvolver soluções em forma de software e assim agregar valor a vida das pessoas. Além de obviamente me divertir no processo."
     ]
   },
+  "career": {
+    "title": "Carreira",
+    "items": [
+      {
+        "title": "Estágio em Desenvolvimento Web",
+        "subtitle": "Empresa Alpha — 2017",
+        "text": "Trabalhei em projetos front-end e integração com APIs.",
+        "detail": "Colaborei com designers para implementar interfaces responsivas, melhorei a integração com APIs e escrevi testes unitários para componentes críticos. Aprendi boas práticas de desenvolvimento em equipe." 
+      },
+      {
+        "title": "Desenvolvedor Jr.",
+        "subtitle": "Empresa Beta — 2018-2019",
+        "text": "Atuei no desenvolvimento fullstack e manutenção de serviços.",
+        "detail": "Implementei funcionalidades no front-end e back-end, participei de code reviews e auxiliei na otimização de performance, reduzindo tempos de resposta através de ajustes em consultas e índices." 
+      },
+      {
+        "title": "Desenvolvedor Pleno",
+        "subtitle": "Empresa Gama — 2020-2022",
+        "text": "Liderança técnica em features-chave e otimização de performance.",
+        "detail": "Liderei uma pequena equipe para entrega de features importantes, introduzi pipelines de CI/CD e implementei monitoramento que aumentou a disponibilidade do sistema e agilizou a resolução de incidentes." 
+      },
+      {
+        "title": "Engenheiro de Software",
+        "subtitle": "Freelance / Projetos Pessoais — 2023",
+        "text": "Criação de projetos pessoais, open-source e consultoria.",
+        "detail": "Desenvolvi projetos pessoais desde a arquitetura até a entrega, contribui para projetos open-source e prestei consultoria técnica para equipes pequenas sobre arquitetura e boas práticas." 
+      },
+      {
+        "title": "Engenheiro de Software Sênior",
+        "subtitle": "Empresa Delta — 2024-presente",
+        "text": "Atuação em arquitetura, liderança técnica e evolução de produtos.",
+        "detail": "Conduzo decisões arquiteturais, mentorio engenheiros e trabalho junto ao produto para alinhar roadmap técnico aos objetivos de negócio. Foco em escalabilidade e experiência do desenvolvedor." 
+      }
+    ]
+  },
   "details": {
     "terminal": {
       "degree": "Ciência da Computação",

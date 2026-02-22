@@ -18,6 +18,41 @@
       "Therefore, my goal is to combine the science and art of programming to develop software solutions that add value to people's lives. And, of course, have fun in the process."
     ]
   },
+  "career": {
+    "title": "Career",
+    "items": [
+      {
+        "title": "Web Development Intern",
+        "subtitle": "Alpha Company — 2017",
+        "text": "Worked on front-end tasks and API integrations.",
+        "detail": "Worked closely with designers to implement responsive UI, improved API integration reliability, and wrote unit tests for key components. Learned best practices for collaborative development."
+      },
+      {
+        "title": "Junior Developer",
+        "subtitle": "Beta Company — 2018-2019",
+        "text": "Contributed to fullstack development and service maintenance.",
+        "detail": "Built features across front-end and back-end, participated in code reviews, and helped reduce average response times through performance tuning and database indexing." 
+      },
+      {
+        "title": "Mid-level Developer",
+        "subtitle": "Gamma Company — 2020-2022",
+        "text": "Technical leadership on key features and performance improvements.",
+        "detail": "Led a small team to deliver high-impact features, introduced CI/CD pipelines, and implemented monitoring which increased system uptime and reduced incident resolution time." 
+      },
+      {
+        "title": "Software Engineer",
+        "subtitle": "Freelance / Personal Projects — 2023",
+        "text": "Building personal projects, open-source work and consulting.",
+        "detail": "Designed and delivered multiple personal projects, contributed to open-source libraries, and consulted for small teams on architecture and best practices." 
+      },
+      {
+        "title": "Senior Software Engineer",
+        "subtitle": "Delta Company — 2024-present",
+        "text": "Working on architecture, technical leadership and product evolution.",
+        "detail": "Driving architectural decisions, mentoring engineers, and working closely with product to align technical roadmaps with business goals. Focused on scalability and developer experience." 
+      }
+    ]
+  },
   "details": {
     "terminal": {
       "degree": "Computer Science",
